@@ -1,1 +1,1 @@
-console.log("Welcome to Nexvora");
+console.log("Nexvora Premium Loaded 🚀");
