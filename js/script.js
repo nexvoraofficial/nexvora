@@ -4,6 +4,95 @@
 
 const posts = [
   {
+  id: 9,
+  title: "😳 Top 5 Free AI Tools That Can Make You Money in 2026 (Beginner Friendly)",
+  content: `
+🔥 Introduction
+
+If you want to start making money online in 2026, AI tools are the fastest way to begin — even if you have zero experience.
+
+In this guide, I’ll show you 5 FREE AI tools that people are already using to earn money online.
+
+---
+
+🚀 1. ChatGPT
+
+ChatGPT helps you:
+- Write content
+- Create business ideas
+- Do freelancing work
+- Build blogs
+
+👉 Many people use it to earn through Fiverr, blogging, and affiliate marketing.
+
+---
+
+⚡ 2. Canva AI
+
+Canva AI allows you to:
+- Design social media posts
+- Create logos
+- Make YouTube thumbnails
+
+👉 You can sell designs online and earn money easily.
+
+---
+
+💰 3. Grammarly
+
+Grammarly helps you:
+- Fix grammar
+- Improve writing quality
+
+👉 Freelancers use it to get better-paid writing jobs.
+
+---
+
+🧠 4. Quillbot
+
+Quillbot is used for:
+- Paraphrasing content
+- Article writing
+- Blogging support
+
+👉 Perfect for content creation and blogging income.
+
+---
+
+🔥 5. Notion AI
+
+Notion AI helps you:
+- Organize business ideas
+- Manage projects
+- Write content faster
+
+👉 Many startup owners use it daily.
+
+---
+
+💡 How People Make Money Using These Tools
+
+You can:
+✔ Start freelancing
+✔ Build a blog
+✔ Do affiliate marketing
+✔ Create YouTube content
+
+---
+
+🚀 Final Thoughts
+
+You don’t need to be an expert.
+You just need to start using these tools consistently.
+
+AI is the fastest way to build online income in 2026.
+
+👉 Start today. Don’t wait.
+`,
+  category: "AI"
+}
+
+  {
     id: 1,
     title: "😳 This AI tool can replace 5 jobs",
     content: "No coding needed. Free to start. People are already making money with it.",
