@@ -1,1 +1,1 @@
-console.log("Nexvora Loaded");
+console.log("Welcome to Nexvora");
