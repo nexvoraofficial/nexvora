@@ -16,6 +16,26 @@ const posts = [
   }
 ];
 
+// SEARCH FUNCTION
+const searchBox = document.getElementById("searchBox");
+
+if (searchBox) {
+  searchBox.addEventListener("keyup", function () {
+    const value = this.value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+
+      if (text.includes(value)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+}
+
 
 // BLOG LIST LOAD (blog.html)
 window.addEventListener("DOMContentLoaded", () => {
