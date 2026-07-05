@@ -1,21 +1,21 @@
 const posts = [
   {
     id: 1,
-    title: "Top 10 Free AI Tools in 2026",
-    category: "AI",
-    content: "ChatGPT, Canva AI, Leonardo AI..."
+    title: "😳 This AI tool can replace 5 jobs",
+    content: "No coding needed. Free to start. People are already making money with it.",
+    category: "AI"
   },
   {
     id: 2,
-    title: "How to Make Money Online",
-    category: "Money",
-    content: "Freelancing, blogging, affiliate marketing..."
+    title: "💰 Make $10 online in 10 minutes",
+    content: "Simple task-based method. Works even for beginners.",
+    category: "Money"
   },
   {
     id: 3,
-    title: "Best AI Websites for Students",
-    category: "AI",
-    content: "ChatGPT, Grammarly, Notion AI..."
+    title: "⚡ Secret AI hack nobody is talking about",
+    content: "This workflow saves 3 hours daily using automation tools.",
+    category: "AI"
   }
 ];
 
