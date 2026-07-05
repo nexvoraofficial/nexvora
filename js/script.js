@@ -19,8 +19,50 @@ const posts = [
   }
 ];
 
-let currentCategory = "all";
-let searchQuery = "";
+let currentIndex = 0;
+const loadPerScroll = 2;
+
+
+// RENDER FUNCTION
+function renderPosts() {
+  const container = document.getElementById("post-container");
+  if (!container) return;
+
+  let nextPosts = posts.slice(currentIndex, currentIndex + loadPerScroll);
+
+  nextPosts.forEach(post => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <h3>${post.title}</h3>
+      <p>${post.content}</p>
+      <a href="post.html?id=${post.id}" class="btn primary">Read More</a>
+    `;
+
+    container.appendChild(card);
+  });
+
+  currentIndex += loadPerScroll;
+}
+
+
+// INITIAL LOAD
+window.addEventListener("DOMContentLoaded", () => {
+  renderPosts();
+});
+
+
+// INFINITE SCROLL LISTENER
+window.addEventListener("scroll", () => {
+  const scrollPosition = window.innerHeight + window.scrollY;
+  const bottom = document.body.offsetHeight - 100;
+
+  if (scrollPosition >= bottom) {
+    renderPosts();
+  }
+});
+
 
 
 // RENDER POSTS (MAIN ENGINE)
