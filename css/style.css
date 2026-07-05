@@ -150,3 +150,15 @@ padding: 20px;
 border-top: 1px solid #1f2937;
 color: #94a3b8;
 }
+button {
+cursor: pointer;
+}
+
+.card {
+transition: 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-6px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
