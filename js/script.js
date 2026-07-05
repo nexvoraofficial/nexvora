@@ -46,6 +46,7 @@ function renderPosts() {
   currentIndex += loadPerScroll;
 }
 
+document.documentElement.style.scrollBehavior = "smooth";
 
 // INITIAL LOAD
 window.addEventListener("DOMContentLoaded", () => {
