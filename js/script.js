@@ -2,19 +2,23 @@ const posts = [
   {
     id: 1,
     title: "Top 10 Free AI Tools in 2026",
-    content: "ChatGPT, Canva AI, Leonardo AI, Grammarly are powerful tools that help you work faster and smarter."
+    category: "AI",
+    content: "ChatGPT, Canva AI, Leonardo AI..."
   },
   {
     id: 2,
-    title: "How to Make Money Online Using AI",
-    content: "You can earn money using freelancing, blogging, affiliate marketing, YouTube automation and AI tools."
+    title: "How to Make Money Online",
+    category: "Money",
+    content: "Freelancing, blogging, affiliate marketing..."
   },
   {
     id: 3,
     title: "Best AI Websites for Students",
-    content: "Students can use ChatGPT, Grammarly, Quillbot, Notion AI and Wolfram Alpha to study better."
+    category: "AI",
+    content: "ChatGPT, Grammarly, Notion AI..."
   }
 ];
+
 
 // SEARCH FUNCTION
 const searchBox = document.getElementById("searchBox");
