@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nexvora Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nexvora Blog - AI & Tech Articles</title>
+
+<meta name="description" content="Read AI tools, tech guides, productivity tips and online earning strategies on Nexvora blog.">
+
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-<div class="container">
+<div class="container nav">
 <h2 class="logo">Nexvora</h2>
 
 <nav>
@@ -21,50 +27,32 @@
 </div>
 </header>
 
-<div class="blog-container" id="blogContainer"></div>
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<h1>Latest Articles</h1>
+<p>Explore AI tools, tech guides and online earning strategies.</p>
+</div>
+</section>
 
-<footer>© 2026 Nexvora</footer>
-
-<script src="js/script.js"></script>
-
-<script>
-const container = document.getElementById("blogContainer");
-
-posts.forEach(post => {
-    const div = document.createElement("div");
-    div.className = "post-card";
-
-    div.innerHTML = `
-        <h2>${post.title}</h2>
-        <p>${post.content.substring(0,100)}...</p>
-    `;
-
-    container.appendChild(div);
-});
-</script>
+<!-- BLOG POSTS (JS will load here) -->
 <section class="features">
-<div class="container grid">
+<div class="container grid" id="post-container">
 
-<div class="card">
-<h3>AI Tools Guide 2026</h3>
-<p>Best AI tools you must use to save time and earn online.</p>
-<a href="post.html" class="btn primary">Read</a>
-</div>
-
-<div class="card">
-<h3>Make Money Online</h3>
-<p>Real methods that actually work in 2026 digital world.</p>
-<a href="post.html" class="btn primary">Read</a>
-</div>
-
-<div class="card">
-<h3>Productivity Hacks</h3>
-<p>Work 2x faster using smart systems and tools.</p>
-<a href="post.html" class="btn primary">Read</a>
-</div>
+<!-- Posts will be injected by JavaScript -->
 
 </div>
 </section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<p>© 2026 Nexvora | All Rights Reserved</p>
+</div>
+</footer>
+
+<!-- JS -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
