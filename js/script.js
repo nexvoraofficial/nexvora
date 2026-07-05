@@ -20,6 +20,23 @@ const posts = [
 ];
 
 
+// CATEGORY FILTER
+function filterCategory(category) {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const text = card.innerText;
+
+    if (category === "all") {
+      card.style.display = "block";
+    } else if (text.includes(category)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
 // SEARCH FUNCTION
 const searchBox = document.getElementById("searchBox");
 
