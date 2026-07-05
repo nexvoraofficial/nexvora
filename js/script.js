@@ -32,7 +32,7 @@ const posts = [
     title: "🧠 AI Productivity Hack",
     content: "Use AI tools to double your output in half the time.",
     category: "AI"
-  }
+  },
   {
   id: 9,
   title: "😳 Top 5 Free AI Tools That Can Make You Money in 2026 (Beginner Friendly)",
