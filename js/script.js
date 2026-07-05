@@ -1,40 +1,23 @@
-// ===============================
-// NEXVORA WEBSITE SCRIPT
-// ===============================
-
-
-// 1. SMOOTH SCROLL (navigation links)
-document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    if (this.hash !== "") {
-      e.preventDefault();
-      const target = document.querySelector(this.hash);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  });
-});
-
-
-// 2. BLOG POSTS DATA (mini CMS)
 const posts = [
   {
+    id: 1,
     title: "Top 10 Free AI Tools in 2026",
     content: "ChatGPT, Canva AI, Leonardo AI, Grammarly are powerful tools that help you work faster and smarter."
   },
   {
+    id: 2,
     title: "How to Make Money Online Using AI",
     content: "You can earn money using freelancing, blogging, affiliate marketing, YouTube automation and AI tools."
   },
   {
+    id: 3,
     title: "Best AI Websites for Students",
     content: "Students can use ChatGPT, Grammarly, Quillbot, Notion AI and Wolfram Alpha to study better."
   }
 ];
 
 
-// 3. RENDER BLOG POSTS (auto display on blog page)
+// BLOG LIST LOAD (blog.html)
 window.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("post-container");
 
@@ -45,11 +28,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
       card.innerHTML = `
         <h3>${post.title}</h3>
-        <p>${post.content}</p>
-        <a href="post.html" class="btn primary">Read More</a>
+        <p>${post.content.substring(0, 80)}...</p>
+        <a href="post.html?id=${post.id}" class="btn primary">Read More</a>
       `;
 
       container.appendChild(card);
     });
+  }
+
+  // SINGLE POST LOAD (post.html)
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+
+  if (id && document.getElementById("post-title")) {
+    const post = posts.find(p => p.id == id);
+
+    if (post) {
+      document.getElementById("post-title").innerText = post.title;
+      document.getElementById("post-content").innerText = post.content;
+    }
   }
 });
