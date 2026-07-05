@@ -4,6 +4,36 @@
 
 const posts = [
   {
+    id: 1,
+    title: "😳 This AI tool can replace 5 jobs",
+    content: "No coding needed. Free to start. People are already making money with it.",
+    category: "AI"
+  },
+  {
+    id: 2,
+    title: "💰 Make $10 online in 10 minutes",
+    content: "Simple task-based method. Works even for beginners.",
+    category: "Money"
+  },
+  {
+    id: 3,
+    title: "⚡ Secret AI hack nobody is talking about",
+    content: "This workflow saves 3 hours daily using automation tools.",
+    category: "AI"
+  },
+  {
+    id: 4,
+    title: "🚀 Earn Passive Income with AI",
+    content: "Automate simple tasks and build income streams online.",
+    category: "Money"
+  },
+  {
+    id: 5,
+    title: "🧠 AI Productivity Hack",
+    content: "Use AI tools to double your output in half the time.",
+    category: "AI"
+  }
+  {
   id: 9,
   title: "😳 Top 5 Free AI Tools That Can Make You Money in 2026 (Beginner Friendly)",
   content: `
