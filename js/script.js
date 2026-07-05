@@ -1,3 +1,7 @@
+// =========================
+// NEXVORA FULL ENGINE
+// =========================
+
 const posts = [
   {
     id: 1,
@@ -16,19 +20,52 @@ const posts = [
     title: "⚡ Secret AI hack nobody is talking about",
     content: "This workflow saves 3 hours daily using automation tools.",
     category: "AI"
+  },
+  {
+    id: 4,
+    title: "🚀 Earn Passive Income with AI",
+    content: "Automate simple tasks and build income streams online.",
+    category: "Money"
+  },
+  {
+    id: 5,
+    title: "🧠 AI Productivity Hack",
+    content: "Use AI tools to double your output in half the time.",
+    category: "AI"
   }
 ];
 
 let currentIndex = 0;
 const loadPerScroll = 2;
 
+let currentCategory = "all";
+let searchQuery = "";
 
-// RENDER FUNCTION
-function renderPosts() {
+
+// =========================
+// RENDER POSTS
+// =========================
+function renderPosts(reset = false) {
   const container = document.getElementById("post-container");
   if (!container) return;
 
-  let nextPosts = posts.slice(currentIndex, currentIndex + loadPerScroll);
+  if (reset) {
+    container.innerHTML = "";
+    currentIndex = 0;
+  }
+
+  let filtered = posts.filter(post => {
+    const matchCategory =
+      currentCategory === "all" || post.category === currentCategory;
+
+    const matchSearch =
+      post.title.toLowerCase().includes(searchQuery) ||
+      post.content.toLowerCase().includes(searchQuery);
+
+    return matchCategory && matchSearch;
+  });
+
+  let nextPosts = filtered.slice(currentIndex, currentIndex + loadPerScroll);
 
   nextPosts.forEach(post => {
     const card = document.createElement("div");
@@ -46,74 +83,26 @@ function renderPosts() {
   currentIndex += loadPerScroll;
 }
 
-document.documentElement.style.scrollBehavior = "smooth";
 
-// INITIAL LOAD
-window.addEventListener("DOMContentLoaded", () => {
-  renderPosts();
-});
-
-
-// INFINITE SCROLL LISTENER
-window.addEventListener("scroll", () => {
-  const scrollPosition = window.innerHeight + window.scrollY;
-  const bottom = document.body.offsetHeight - 100;
-
-  if (scrollPosition >= bottom) {
-    renderPosts();
-  }
-});
-
-
-
-// RENDER POSTS (MAIN ENGINE)
-function renderPosts() {
-  const container = document.getElementById("post-container");
-  if (!container) return;
-
-  container.innerHTML = "";
-
-  const filtered = posts.filter(post => {
-    const matchCategory =
-      currentCategory === "all" || post.category === currentCategory;
-
-    const matchSearch =
-      post.title.toLowerCase().includes(searchQuery) ||
-      post.content.toLowerCase().includes(searchQuery);
-
-    return matchCategory && matchSearch;
-  });
-
-  filtered.forEach(post => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-
-    card.innerHTML = `
-      <h3>${post.title}</h3>
-      <p>${post.content.substring(0, 90)}...</p>
-      <a href="post.html?id=${post.id}" class="btn primary">Read More</a>
-    `;
-
-    container.appendChild(card);
-  });
-}
-
-
-// CATEGORY FILTER (FIXED)
+// =========================
+// CATEGORY FILTER
+// =========================
 function filterCategory(category) {
   currentCategory = category;
-  renderPosts();
+  renderPosts(true);
 }
 
 
-// SEARCH (FIXED)
+// =========================
+// SEARCH
+// =========================
 window.addEventListener("DOMContentLoaded", () => {
   const searchBox = document.getElementById("searchBox");
 
   if (searchBox) {
     searchBox.addEventListener("input", function () {
       searchQuery = this.value.toLowerCase();
-      renderPosts();
+      renderPosts(true);
     });
   }
 
@@ -121,7 +110,22 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// =========================
+// INFINITE SCROLL
+// =========================
+window.addEventListener("scroll", () => {
+  const scrollPosition = window.innerHeight + window.scrollY;
+  const bottom = document.body.offsetHeight - 150;
+
+  if (scrollPosition >= bottom) {
+    renderPosts();
+  }
+});
+
+
+// =========================
 // SINGLE POST PAGE
+// =========================
 window.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get("id");
@@ -138,3 +142,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+
+// smooth scroll
+document.documentElement.style.scrollBehavior = "smooth";
