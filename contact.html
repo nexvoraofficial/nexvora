@@ -3,77 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Nexvora</title>
 
+<title>Contact | Nexvora</title>
+
+<meta name="description" content="Contact Nexvora for professional web design, development, SEO and AI solutions.">
+
+<link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-    
-<style>
-.contact{
-    width:80%;
-    margin:auto;
-    padding:50px 0;
-}
-
-input, textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:none;
-    border-radius:5px;
-}
-
-button{
-    padding:12px 20px;
-    background:#06b6d4;
-    border:none;
-    color:white;
-    cursor:pointer;
-}
-</style>
-
 </head>
 
 <body>
 
 <header>
-
 <div class="container nav">
 
 <a href="index.html" class="logo">
-<img src="images/logo.png" alt="Nexvora Logo">
+<img src="images/logo.png" alt="Nexvora Logo" height="40">
 </a>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="active">Contact</a>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html" class="active">Contact</a>
 </nav>
 
 </div>
-
 </header>
-<div class="contact">
+
+<section class="hero">
+
+<div class="container">
 
 <h1>Contact Us</h1>
 
+<p>
+Have a project in mind? We'd love to hear from you.
+</p>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="card">
+
 <form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Send</button>
+
+<label>Full Name</label><br><br>
+<input type="text" placeholder="Enter your name" required>
+
+<label>Email Address</label><br><br>
+<input type="email" placeholder="Enter your email" required>
+
+<label>Subject</label><br><br>
+<input type="text" placeholder="Project subject">
+
+<label>Message</label><br><br>
+<textarea placeholder="Write your message..." rows="6" style="width:100%;padding:12px;border-radius:10px;"></textarea>
+
+<br><br>
+
+<button type="submit" class="btn primary">
+Send Message
+</button>
+
 </form>
 
 </div>
 
+</section>
+
+<section class="container">
+
+<div class="card">
+
+<h2>Business Information</h2>
+
+<p>📧 Email: hello@nexvora.com</p>
+<p>🌍 Website: nexvoraofficial.github.io/nexvora</p>
+<p>⏰ Available: Monday - Friday</p>
+
+</div>
+
+</section>
+
 <footer>
-© 2026 Nexvora
+
+<div class="container">
+
+<p>© 2026 Nexvora. All Rights Reserved.</p>
+
+</div>
+
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
