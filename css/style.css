@@ -175,7 +175,11 @@ nav a:hover {
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
