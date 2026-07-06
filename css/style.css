@@ -164,3 +164,11 @@ nav a:hover {
     color: #00bfff;
     border-bottom: 2px solid #00bfff;
 }
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.3);
+}
