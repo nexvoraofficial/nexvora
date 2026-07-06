@@ -4,69 +4,248 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nexvora Blog | AI Tools, Tech Guides & Online Earning</title>
+<title>Blog | Nexvora</title>
 
-<meta name="description" content="Read viral AI tools, money-making guides, productivity tips and tech hacks on Nexvora.">
+<meta name="description" content="Read the latest AI, Web Design, SEO and Technology articles from Nexvora.">
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="favicon.ico">
+
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
+
 <div class="container nav">
-<h2 class="logo">Nexvora</h2>
+
+<a href="index.html" class="logo">
+<img src="logo.png" alt="Nexvora Logo">
+</a>
 
 <nav>
 <a href="index.html">Home</a>
-<a href="blog.html">Blog</a>
+<a href="blog.html" class="active">Blog</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </nav>
+
 </div>
+
 </header>
 
-<!-- HERO -->
 <section class="hero">
+
 <div class="container">
-<h1>Latest Articles</h1>
-<p>Explore AI tools, tech guides and online earning strategies.</p>
-</div>
-</section>
-<div class="container" style="margin-bottom:20px; text-align:center;">
-  <button onclick="filterCategory('all')" class="btn secondary">All</button>
-  <button onclick="filterCategory('AI')" class="btn secondary">AI</button>
-  <button onclick="filterCategory('Money')" class="btn secondary">Money</button>
-</div>
 
-  <div class="container" style="margin-bottom:20px;">
-  <input type="text" id="searchBox" placeholder="Search articles..."
-    style="width:100%; padding:12px; border-radius:8px; border:none;">
-</div>
+<h1>Nexvora Blog</h1>
 
-<!-- BLOG POSTS (JS will load here) -->
-<section class="features">
-<div class="container grid" id="post-container">
+<p>
+Learn Web Design, AI, SEO, Programming and Online Business through practical tutorials.
+</p>
 
-<!-- Posts will be injected by JavaScript -->
-
-</div>
-  <div class="card" style="text-align:center;">
-  <p>ADVERTISEMENT</p>
 </div>
 
 </section>
 
-<!-- FOOTER -->
+<section class="container">
+
+<div class="card">
+
+<h2>🔍 Search Articles</h2>
+
+<input
+type="text"
+placeholder="Search articles...">
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 style="text-align:center;margin:50px 0 25px;">
+Categories
+</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>🤖 AI</h3>
+<p>Artificial Intelligence tools and tutorials.</p>
+</div>
+
+<div class="card">
+<h3>🌐 Web Design</h3>
+<p>Modern websites and UI inspiration.</p>
+</div>
+
+<div class="card">
+<h3>🚀 SEO</h3>
+<p>Google ranking tips and strategies.</p>
+</div>
+
+<div class="card">
+<h3>💻 Programming</h3>
+<p>HTML, CSS, JavaScript and more.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2 style="text-align:center;margin:60px 0 30px;">
+Latest Articles
+</h2>
+
+<div class="features">
+
+<div class="card">
+
+<h3>Top 10 AI Tools for 2026</h3>
+
+<p>
+Discover powerful AI tools that can save time and boost productivity.
+</p>
+
+<a href="article.html" class="btn">
+Read Article →
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>How to Build Your First Website</h3>
+
+<p>
+A beginner-friendly guide to creating a professional website.
+</p>
+
+<a href="article.html" class="btn">
+Read Article →
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>SEO Checklist for Beginners</h3>
+
+<p>
+Simple SEO techniques to help your website rank on Google.
+</p>
+
+<a href="article.html" class="btn">
+Read Article →
+</a>
+
+</div>
+
+</div>
+
+</section>
+<!-- =========================
+     FEATURED POSTS
+========================= -->
+
+<section class="container">
+
+    <h2 style="text-align:center; margin:60px 0 30px;">
+        Featured Articles
+    </h2>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>🎯 Why Every Business Needs a Website in 2026</h3>
+            <p>
+                Discover why having a professional website is essential for business growth.
+            </p>
+            <a href="article.html" class="btn">Read More</a>
+        </div>
+
+        <div class="card">
+            <h3>🤖 ChatGPT vs Gemini vs Claude</h3>
+            <p>
+                Compare the most popular AI assistants and choose the right one for your work.
+            </p>
+            <a href="article.html" class="btn">Read More</a>
+        </div>
+
+        <div class="card">
+            <h3>💰 10 Ways to Earn Money Using AI</h3>
+            <p>
+                Learn practical methods to generate income using today's AI tools.
+            </p>
+            <a href="article.html" class="btn">Read More</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="container">
+
+    <div class="card" style="text-align:center;">
+
+        <h2>📩 Subscribe to Nexvora</h2>
+
+        <p>
+            Get the latest AI, Web Design, SEO and Tech articles delivered to your inbox.
+        </p>
+
+        <input type="email" placeholder="Enter your email">
+
+        <button class="btn primary">
+            Subscribe Free
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     PAGINATION
+========================= -->
+
+<section class="container" style="text-align:center; margin:50px auto;">
+
+    <a href="#" class="btn">1</a>
+    <a href="#" class="btn">2</a>
+    <a href="#" class="btn">3</a>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-<div class="container">
-<p>© 2026 Nexvora | All Rights Reserved</p>
-</div>
-</footer>
 
-<!-- JS -->
-<script src="js/script.js"></script>
+    <div class="container">
+
+        <h3>Nexvora</h3>
+
+        <p>
+            Web Design • Development • SEO • AI Solutions
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 Nexvora. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
