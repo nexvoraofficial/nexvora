@@ -156,3 +156,11 @@ nav a.active {
     font-weight: bold;
     border-bottom: 2px solid #00bfff;
 }
+nav a {
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:hover {
+    color: #00bfff;
+    border-bottom: 2px solid #00bfff;
+}
