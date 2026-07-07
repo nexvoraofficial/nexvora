@@ -294,3 +294,35 @@ nav{
     width:32px;
     height:32px;
 }
+/* Theme Colors */
+:root{
+    --bg:#ffffff;
+    --card:#f8fafc;
+    --text:#111827;
+    --primary:#2563eb;
+}
+
+body.dark{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#f8fafc;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+}
+
+.card{
+    background:var(--card);
+    transition:.3s;
+}
+
+.theme-btn{
+    background:none;
+    border:none;
+    font-size:22px;
+    cursor:pointer;
+    margin-left:15px;
+}
