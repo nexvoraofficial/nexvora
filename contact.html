@@ -51,25 +51,42 @@ Have a project in mind? We'd love to hear from you.
 
 <div class="card">
 
-<form>
+<form action="https://formsubmit.co/mailnexvora@gmail.com" method="POST">
 
-<label>Full Name</label><br><br>
-<input type="text" placeholder="Enter your name" required>
+    <!-- Hidden Settings -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Contact Message - Nexvora">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://nexvoraofficial.github.io/nexvora/contact.html?success=true">
 
-<label>Email Address</label><br><br>
-<input type="email" placeholder="Enter your email" required>
+    <label>Full Name</label><br><br>
+    <input type="text" name="name" placeholder="Enter your name" required>
 
-<label>Subject</label><br><br>
-<input type="text" placeholder="Project subject">
+    <br><br>
 
-<label>Message</label><br><br>
-<textarea placeholder="Write your message..." rows="6" style="width:100%;padding:12px;border-radius:10px;"></textarea>
+    <label>Email Address</label><br><br>
+    <input type="email" name="email" placeholder="Enter your email" required>
 
-<br><br>
+    <br><br>
 
-<button type="submit" class="btn primary">
-Send Message
-</button>
+    <label>Subject</label><br><br>
+    <input type="text" name="subject" placeholder="Project subject">
+
+    <br><br>
+
+    <label>Message</label><br><br>
+    <textarea
+        name="message"
+        placeholder="Write your message..."
+        rows="6"
+        style="width:100%;padding:12px;border-radius:10px;"
+        required></textarea>
+
+    <br><br>
+
+    <button type="submit" class="btn primary">
+        Send Message
+    </button>
 
 </form>
 
