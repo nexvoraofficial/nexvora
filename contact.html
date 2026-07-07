@@ -100,9 +100,9 @@ Have a project in mind? We'd love to hear from you.
 
 <h2>Business Information</h2>
 
-<p>📧 Email: hello@nexvora.com</p>
-<p>🌍 Website: nexvoraofficial.github.io/nexvora</p>
-<p>⏰ Available: Monday - Friday</p>
+<p>📧 Email: mailnexvora@gmail.com</p>
+<p>🌍 Website: https://nexvoraofficial.github.io/nexvora/</p>
+<p>⏰ Available: Monday – Friday</p>
 
 </div>
 
@@ -119,6 +119,28 @@ Have a project in mind? We'd love to hear from you.
 </footer>
 
 <script src="js/script.js"></script>
+    
+<script>
+const params = new URLSearchParams(window.location.search);
 
+if (params.get("success") === "true") {
+
+    const message = document.createElement("div");
+
+    message.innerHTML = "✅ Thank you! Your message has been sent successfully.";
+
+    message.style.background = "#d4edda";
+    message.style.color = "#155724";
+    message.style.padding = "15px";
+    message.style.margin = "20px";
+    message.style.borderRadius = "10px";
+    message.style.fontWeight = "bold";
+    message.style.textAlign = "center";
+
+    document.querySelector(".container").prepend(message);
+
+    window.history.replaceState({}, document.title, window.location.pathname);
+}
+</script>
 </body>
 </html>
