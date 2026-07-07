@@ -1,11 +1,38 @@
 /* =========================
-   NEXVORA - PROFESSIONAL UI
+   NEXVORA PROFESSIONAL CSS
+   PART 1
 ========================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg:#ffffff;
+    --surface:#ffffff;
+    --header:#ffffff;
+    --text:#111827;
+    --muted:#6b7280;
+    --border:#e5e7eb;
+    --input:#f9fafb;
+    --primary:#2563eb;
+    --primary-hover:#1d4ed8;
+}
+
+body.dark{
+    --bg:#0b1120;
+    --surface:#111827;
+    --header:#111827;
+    --text:#f8fafc;
+    --muted:#cbd5e1;
+    --border:#1f2937;
+    --input:#0f172a;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -13,170 +40,120 @@ body{
     background:var(--bg);
     color:var(--text);
     line-height:1.6;
-    transition:.3s;
+    transition:.3s ease;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
-/* Header */
+
+/* =========================
+   HEADER
+========================= */
+
 header{
     background:var(--header);
     border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 0;
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
 }
 
-.logo img {
-    height: 45px;
+.logo img{
+    height:45px;
 }
 
-nav {
-    display: flex;
-    gap: 20px;
+nav{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
 nav a{
     color:var(--text);
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
 }
 
 nav a:hover,
-nav a.active {
-    color: #3b82f6;
+nav a.active{
+    color:var(--primary);
 }
 
-/* Hero */
 
-.hero p{
-    color:var(--text-secondary);
+.theme-btn{
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:22px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
 
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    color: #cbd5e1;
-    font-size: 1.1rem;
-}
+/* =========================
+   HERO
+========================= */
 
-/* Buttons */
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 28px;
-    background: #2563eb;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: .3s;
-}
-
-.btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-3px);
-}
-
-/* Features */
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-    gap: 25px;
-    width: 90%;
-    max-width: 1100px;
-    margin: 50px auto;
-}
-
-.card{
-    background:var(--surface);
-    border:1px solid var(--border);
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #2563eb;
-    box-shadow: 0 15px 35px rgba(37,99,235,.25);
-}
-
-.card h3 {
-    margin-bottom: 15px;
-}
-
-.card p{
-    color:var(--text-secondary);
-}
-
-/* Form */
-
-input {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #374151;
-    border-radius: 10px;
-    background: #0f172a;
-    color: white;
-    margin: 15px 0;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-}
-
-/* Footer */
-
-footer{
-    border-top:1px solid var(--border);
-    color:var(--text-secondary);
-}
-
-/* Mobile */
-
-@media (max-width:768px){
-
-.nav{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav{
-    flex-wrap:wrap;
-    justify-content:center;
+.hero{
+    text-align:center;
+    padding:110px 20px;
 }
 
 .hero h1{
-    font-size:2.2rem;
+    font-size:3rem;
+    margin-bottom:20px;
 }
 
-.hero{
-    padding:80px 20px;
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:var(--muted);
+    font-size:1.1rem;
 }
 
-}
-/* ---------- Smooth Scroll ---------- */
-html{
-    scroll-behavior:smooth;
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
 }
 
-/* ---------- Section Spacing ---------- */
+.btn:hover{
+    background:var(--primary-hover);
+    transform:translateY(-3px);
+}
+
+.btn.primary{
+    background:#3b82f6;
+}
+/* =========================
+   SECTIONS
+========================= */
+
 section{
     padding:70px 0;
 }
 
-/* ---------- Headings ---------- */
 h1,h2,h3{
     font-weight:700;
 }
@@ -185,79 +162,152 @@ h2{
     margin-bottom:20px;
 }
 
-/* ---------- Images ---------- */
+
+/* =========================
+   FEATURES GRID
+========================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+    background:var(--surface);
+    padding:25px;
+    border-radius:16px;
+    border:1px solid var(--border);
+    transition:.3s ease;
+    color:var(--text);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+    box-shadow:0 15px 35px rgba(37,99,235,.18);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+
+/* =========================
+   LISTS
+========================= */
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin:10px 0;
+}
+
+
+/* =========================
+   FORMS
+========================= */
+
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    margin:15px 0;
+    border-radius:10px;
+    border:1px solid var(--border);
+    background:var(--input);
+    color:var(--text);
+    font-size:16px;
+    transition:.3s;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:var(--muted);
+}
+
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:var(--primary);
+}
+
+
+textarea{
+    resize:vertical;
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
 img{
     max-width:100%;
     display:block;
 }
 
-/* ---------- Cards ---------- */
-.card{
-    overflow:hidden;
+
+/* =========================
+   BLOG / PROJECT CARDS
+========================= */
+
+.card a{
+    color:white;
 }
 
-.card:hover{
-    transform:translateY(-10px);
+
+/* =========================
+   FOOTER AREA SUPPORT
+========================= */
+
+footer{
+    margin-top:60px;
+    padding:35px 20px;
+    text-align:center;
+    background:var(--surface);
+    border-top:1px solid var(--border);
+    color:var(--muted);
 }
 
-/* ---------- Buttons ---------- */
-.btn{
-    font-weight:600;
+footer h3{
+    color:var(--text);
 }
 
-.btn.primary{
-    background:#3b82f6;
-}
 
-.btn.primary:hover{
-    background:#2563eb;
-}
+/* =========================
+   TRANSITIONS
+========================= */
 
-/* ---------- Forms ---------- */
-textarea{
-    width:100%;
-    padding:14px;
-    border-radius:10px;
-    border:1px solid #374151;
-    background:#0f172a;
-    color:#fff;
-    resize:vertical;
-    margin:15px 0;
-}
-
+.card,
+header,
+footer,
 input,
 textarea{
-    background:var(--input);
-    color:var(--text);
-    border:1px solid var(--border);
+    transition:
+    background .3s ease,
+    color .3s ease,
+    border .3s ease;
 }
+/* =========================
+   WHATSAPP FLOATING BUTTON
+========================= */
 
-/* ---------- Footer ---------- */
-footer p{
-    margin:8px 0;
-}
-
-/* ---------- Mobile ---------- */
-@media(max-width:768px){
-
-.hero h1{
-    font-size:2rem;
-}
-
-.features{
-    grid-template-columns:1fr;
-}
-
-.btn{
-    width:100%;
-    text-align:center;
-}
-
-nav{
-    gap:12px;
-}
-
-}
 .whatsapp-chat{
     position:fixed;
     right:20px;
@@ -270,45 +320,150 @@ nav{
     justify-content:center;
     align-items:center;
     box-shadow:0 8px 20px rgba(0,0,0,.25);
-    transition:.3s ease;
     z-index:9999;
+    transition:.3s ease;
 }
 
 .whatsapp-chat:hover{
     transform:scale(1.1);
-    box-shadow:0 12px 28px rgba(0,0,0,.35);
 }
 
 .whatsapp-chat svg{
     width:32px;
     height:32px;
 }
-/* Theme Colors */
-:root{
-    --bg:#ffffff;
-    --surface:#ffffff;
-    --header:#ffffff;
-    --text:#111827;
-    --text-secondary:#6b7280;
-    --border:#e5e7eb;
-    --input:#f8fafc;
-    --primary:#2563eb;
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.card,
+.hero,
+.btn{
+    animation:fadeUp .5s ease;
 }
 
-body.dark{
-    --bg:#0b1120;
-    --surface:#111827;
-    --header:#111827;
-    --text:#f8fafc;
-    --text-secondary:#cbd5e1;
-    --border:#1f2937;
-    --input:#0f172a;
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
-.theme-btn{
-    background:none;
-    border:none;
-    font-size:22px;
-    cursor:pointer;
-    margin-left:15px;
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+
+    .hero{
+        padding:80px 20px;
+    }
+
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+
+    .hero p{
+        font-size:1rem;
+    }
+
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+
+    .whatsapp-chat{
+        width:55px;
+        height:55px;
+        right:15px;
+        bottom:15px;
+    }
+
+}
+
+
+/* =========================
+   SMALL DEVICES
+========================= */
+
+@media(max-width:480px){
+
+    .container{
+        width:92%;
+    }
+
+
+    .hero h1{
+        font-size:1.7rem;
+    }
+
+
+    nav a{
+        font-size:14px;
+    }
+
+}
+
+
+/* =========================
+   DARK MODE TEXT FIX
+========================= */
+
+body.dark .card h2,
+body.dark .card h3,
+body.dark h1,
+body.dark h2,
+body.dark h3{
+    color:#f8fafc;
+}
+
+
+body.dark input,
+body.dark textarea{
+    color:#f8fafc;
+}
+
+
+/* =========================
+   LIGHT MODE TEXT FIX
+========================= */
+
+body:not(.dark) .card h2,
+body:not(.dark) .card h3,
+body:not(.dark) h1,
+body:not(.dark) h2,
+body:not(.dark) h3{
+    color:#111827;
 }
