@@ -32,3 +32,27 @@ document.querySelectorAll(".btn").forEach(btn => {
 });
 
 console.log("Nexvora Loaded Successfully");
+const subscribeForm = document.getElementById("subscribeForm");
+
+subscribeForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById("subscriberEmail").value;
+
+    fetch("subscribe.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: "email=" + encodeURIComponent(email),
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("subscribeMessage").innerHTML = data;
+        subscribeForm.reset();
+    })
+    .catch(() => {
+        document.getElementById("subscribeMessage").innerHTML =
+            "Something went wrong.";
+    });
+});
