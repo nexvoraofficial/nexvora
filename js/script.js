@@ -2,7 +2,6 @@
 // Nexvora JavaScript
 // ==========================
 
-alert("script loaded");
 
 // Current year in footer
 const year = document.getElementById("year");
