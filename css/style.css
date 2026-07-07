@@ -8,11 +8,12 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Inter", sans-serif;
-    background: #0b1120;
-    color: #f8fafc;
-    line-height: 1.6;
+body{
+    font-family:"Inter",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    transition:.3s;
 }
 
 .container {
@@ -22,12 +23,9 @@ body {
 }
 
 /* Header */
-header {
-    background: #111827;
-    border-bottom: 1px solid #1f2937;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+header{
+    background:var(--header);
+    border-bottom:1px solid var(--border);
 }
 
 .nav {
@@ -46,11 +44,8 @@ nav {
     gap: 20px;
 }
 
-nav a {
-    color: #d1d5db;
-    text-decoration: none;
-    font-weight: 500;
-    transition: .3s;
+nav a{
+    color:var(--text);
 }
 
 nav a:hover,
@@ -60,9 +55,8 @@ nav a.active {
 
 /* Hero */
 
-.hero {
-    text-align: center;
-    padding: 110px 20px;
+.hero p{
+    color:var(--text-secondary);
 }
 
 .hero h1 {
@@ -106,12 +100,9 @@ nav a.active {
     margin: 50px auto;
 }
 
-.card {
-    background: #111827;
-    padding: 25px;
-    border-radius: 16px;
-    border: 1px solid #1f2937;
-    transition: .3s;
+.card{
+    background:var(--surface);
+    border:1px solid var(--border);
 }
 
 .card:hover {
@@ -124,8 +115,8 @@ nav a.active {
     margin-bottom: 15px;
 }
 
-.card p {
-    color: #cbd5e1;
+.card p{
+    color:var(--text-secondary);
 }
 
 /* Form */
@@ -147,12 +138,9 @@ button {
 
 /* Footer */
 
-footer {
-    text-align: center;
-    padding: 35px 20px;
-    border-top: 1px solid #1f2937;
-    color: #94a3b8;
-    margin-top: 60px;
+footer{
+    border-top:1px solid var(--border);
+    color:var(--text-secondary);
 }
 
 /* Mobile */
@@ -237,10 +225,11 @@ textarea{
     margin:15px 0;
 }
 
-input:focus,
-textarea:focus{
-    outline:none;
-    border-color:#3b82f6;
+input,
+textarea{
+    background:var(--input);
+    color:var(--text);
+    border:1px solid var(--border);
 }
 
 /* ---------- Footer ---------- */
@@ -297,26 +286,23 @@ nav{
 /* Theme Colors */
 :root{
     --bg:#ffffff;
-    --card:#f8fafc;
+    --surface:#ffffff;
+    --header:#ffffff;
     --text:#111827;
+    --text-secondary:#6b7280;
+    --border:#e5e7eb;
+    --input:#f8fafc;
     --primary:#2563eb;
 }
 
 body.dark{
-    --bg:#0f172a;
-    --card:#1e293b;
+    --bg:#0b1120;
+    --surface:#111827;
+    --header:#111827;
     --text:#f8fafc;
-}
-
-body{
-    background:var(--bg);
-    color:var(--text);
-    transition:.3s;
-}
-
-.card{
-    background:var(--card);
-    transition:.3s;
+    --text-secondary:#cbd5e1;
+    --border:#1f2937;
+    --input:#0f172a;
 }
 
 .theme-btn{
