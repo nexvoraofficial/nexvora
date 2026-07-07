@@ -213,7 +213,6 @@
 ========================= -->
 
 <section class="container">
-
     <div class="card">
 
         <h2>📩 Stay Updated</h2>
@@ -222,14 +221,24 @@
             Get free AI, Web Design and SEO tips directly to your inbox.
         </p>
 
-        <input type="email" placeholder="Enter your email">
+        <form id="subscribeForm">
 
-        <button class="btn primary">
-            Subscribe Free
-        </button>
+            <input
+                type="email"
+                id="subscriberEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <button type="submit" class="btn primary">
+                Subscribe Free
+            </button>
+
+        </form>
+
+        <p id="subscribeMessage"></p>
 
     </div>
-
 </section>
 
 <!-- =========================
