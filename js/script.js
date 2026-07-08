@@ -35,14 +35,17 @@ document.querySelectorAll(".btn").forEach(btn => {
 console.log("Nexvora Loaded Successfully");
 
 // ==========================
-// Load Blog Articles
+// Blog Render + Search
 // ==========================
 
 const blogPosts = document.getElementById("blog-posts");
+const searchInput = document.getElementById("article-search");
 
-if (blogPosts && typeof articles !== "undefined") {
+function renderArticles(list) {
 
-  blogPosts.innerHTML = articles.map(article => `
+  if (!blogPosts) return;
+
+  blogPosts.innerHTML = list.map(article => `
     <div class="card">
 
       <h3>${article.title}</h3>
@@ -59,6 +62,35 @@ if (blogPosts && typeof articles !== "undefined") {
   `).join("");
 
 }
+
+if (blogPosts && typeof articles !== "undefined") {
+
+  // Show all articles first
+  renderArticles(articles);
+
+  // Live Search
+  if (searchInput) {
+
+    searchInput.addEventListener("input", () => {
+
+      const keyword = searchInput.value.toLowerCase().trim();
+
+      const filtered = articles.filter(article =>
+
+        article.title.toLowerCase().includes(keyword) ||
+        article.category.toLowerCase().includes(keyword) ||
+        article.description.toLowerCase().includes(keyword)
+
+      );
+
+      renderArticles(filtered);
+
+    });
+
+  }
+
+}
+
 const toggle = document.getElementById("theme-toggle");
 
 if (toggle) {
