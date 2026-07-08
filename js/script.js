@@ -145,3 +145,24 @@ if (toggle) {
     });
 
 }
+// ==========================
+// Show All Articles
+// ==========================
+
+const showAllBtn = document.getElementById("show-all-articles");
+
+if (showAllBtn) {
+  showAllBtn.addEventListener("click", () => {
+
+    renderArticles(articles);
+
+    if (searchInput) {
+      searchInput.value = "";
+    }
+
+    blogPosts.scrollIntoView({
+      behavior: "smooth"
+    });
+
+  });
+}
