@@ -90,7 +90,37 @@ if (blogPosts && typeof articles !== "undefined") {
   }
 
 }
+// ==========================
+// Category Filter
+// ==========================
 
+document.querySelectorAll("[data-category]").forEach(card => {
+
+  card.style.cursor = "pointer";
+
+  card.addEventListener("click", () => {
+
+    const category = card.dataset.category;
+
+    const filtered = articles.filter(article =>
+      article.category === category
+    );
+
+    renderArticles(filtered);
+
+    // Search box එක clear කරන්න
+    if (searchInput) {
+      searchInput.value = "";
+    }
+
+    // Latest Articles section එකට scroll කරන්න
+    blogPosts.scrollIntoView({
+      behavior: "smooth"
+    });
+
+  });
+
+});
 const toggle = document.getElementById("theme-toggle");
 
 if (toggle) {
