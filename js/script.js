@@ -33,6 +33,32 @@ document.querySelectorAll(".btn").forEach(btn => {
 });
 
 console.log("Nexvora Loaded Successfully");
+
+// ==========================
+// Load Blog Articles
+// ==========================
+
+const blogPosts = document.getElementById("blog-posts");
+
+if (blogPosts && typeof articles !== "undefined") {
+
+  blogPosts.innerHTML = articles.map(article => `
+    <div class="card">
+
+      <h3>${article.title}</h3>
+
+      <p>${article.description}</p>
+
+      <p><strong>${article.category}</strong> • ${article.readTime}</p>
+
+      <a href="article.html?id=${article.id}" class="btn">
+        Read Article →
+      </a>
+
+    </div>
+  `).join("");
+
+}
 const toggle = document.getElementById("theme-toggle");
 
 if (toggle) {
