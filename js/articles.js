@@ -17,7 +17,7 @@ const articles = [
 
   {
     id: "first-website",
-
+    url: "articles/first-website.html",
     title: "How to Build Your First Website",
     category: "Web Design",
     author: "Nexvora Team",
