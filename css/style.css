@@ -471,9 +471,11 @@ body:not(.dark) h3{
    Article Page Styling
 ========================== */
 
-.article-page {
-  max-width: 900px;
-  margin: 50px auto;
+.article-page{
+    width:100%;
+    max-width:900px;
+    margin:50px auto;
+    min-width:0;
 }
 
 .article-page article {
@@ -705,4 +707,25 @@ position:sticky;
 top:90px;
 
 }
+}
+/* ===== Fix mobile overflow ===== */
+
+.article-page{
+    min-width:0;
+}
+
+.article-page pre{
+    display:block;
+    max-width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    white-space:pre;
+    padding:16px;
+    border-radius:10px;
+    background:#1e293b;
+}
+
+.article-page pre code{
+    display:block;
+    min-width:max-content;
 }
