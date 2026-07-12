@@ -54,7 +54,7 @@ function renderArticles(list) {
 
       <p><strong>${article.category}</strong> • ${article.readTime}</p>
 
-      <a href="article.html?id=${article.id}" class="btn">
+      <a href="${article.url || `article.html?id=${article.id}`}" class="btn">
         Read Article →
       </a>
 
