@@ -189,3 +189,32 @@ if (progressBar) {
   });
 
 }
+// ==========================
+// Copy Article Link
+// ==========================
+
+const copyArticleLink = document.getElementById("copy-article-link");
+
+if (copyArticleLink) {
+
+  copyArticleLink.addEventListener("click", async () => {
+
+    try {
+
+      await navigator.clipboard.writeText(window.location.href);
+
+      copyArticleLink.textContent = "✓ Link Copied";
+
+      setTimeout(() => {
+        copyArticleLink.textContent = "Copy Link";
+      }, 2000);
+
+    } catch (error) {
+
+      alert("Unable to copy the link.");
+
+    }
+
+  });
+
+}
