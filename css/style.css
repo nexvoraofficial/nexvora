@@ -632,3 +632,21 @@ body:not(.dark) .breadcrumb {
 body.dark .breadcrumb {
   color: #e8e8e8;
 }
+.article-tags{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:20px;
+}
+
+.article-tags span{
+padding:8px 14px;
+border-radius:999px;
+background:#6a5cff;
+color:#fff;
+font-size:.9rem;
+}
+
+body.dark .article-tags span{
+background:#8a7bff;
+}
