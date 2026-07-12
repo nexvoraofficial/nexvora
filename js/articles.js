@@ -3,6 +3,8 @@ const articles = [
 {
     id: "top-10-ai-tools-2026",
 
+    url: "articles/top-10-ai-tools-2026.html",
+
     title: "Top 10 AI Tools for 2026",
 
     category: "AI",
