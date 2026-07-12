@@ -218,3 +218,24 @@ if (copyArticleLink) {
   });
 
 }
+const scrollTopBtn=document.getElementById("scroll-top");
+
+if(scrollTopBtn){
+
+window.addEventListener("scroll",()=>{
+
+scrollTopBtn.style.display=
+window.scrollY>400?"block":"none";
+
+});
+
+scrollTopBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+}
