@@ -133,11 +133,30 @@ Latest Articles
             Get the latest AI, Web Design, SEO and Tech articles delivered to your inbox.
         </p>
 
-        <input type="email" placeholder="Enter your email">
+        <form action="https://formsubmit.co/mailnexvora@gmail.com" method="POST">
 
-        <button class="btn primary">
-            Subscribe Free
-        </button>
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="hidden" name="_subject" value="New Blog Newsletter Subscriber">
+
+    <input type="hidden" name="_template" value="table">
+
+    <input
+        type="hidden"
+        name="_next"
+        value="https://nexvoraofficial.github.io/nexvora/blog.html?subscribed=true">
+
+    <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required>
+
+    <button type="submit" class="btn primary">
+        Subscribe Free
+    </button>
+
+</form>
 
     </div>
 
@@ -154,7 +173,38 @@ Latest Articles
     <a href="#" class="btn">3</a>
 
 </section>
+<script>
+const params = new URLSearchParams(window.location.search);
 
+if (params.get("subscribed") === "true") {
+
+    const message = document.createElement("div");
+
+    message.textContent = "✅ Thank you for subscribing!";
+
+    message.style.background = "#d4edda";
+    message.style.color = "#155724";
+    message.style.padding = "15px";
+    message.style.marginTop = "20px";
+    message.style.borderRadius = "10px";
+    message.style.fontWeight = "bold";
+    message.style.textAlign = "center";
+
+    const newsletterCard = document.querySelector(
+        "section.container .card"
+    );
+
+    if (newsletterCard) {
+        newsletterCard.prepend(message);
+    }
+
+    window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+    );
+}
+</script>
 <!-- =========================
      FOOTER
 ========================= -->
