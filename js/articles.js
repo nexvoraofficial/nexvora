@@ -32,7 +32,7 @@ const articles = [
 
   {
     id: "seo-checklist",
-
+    url: "articles/seo-checklist.html",
     title: "SEO Checklist for Beginners",
     category: "SEO",
     author: "Nexvora Team",
