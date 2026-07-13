@@ -58,8 +58,13 @@ function renderArticles(list) {
 
   <p>${article.description}</p>
 
-  <p><strong>${article.category}</strong> • ${article.readTime}</p>
+  <p class="article-info">
+    <strong>${article.category}</strong> • ${article.readTime}
+</p>
 
+<p class="article-meta-card">
+    By ${article.author} • ${article.date}
+</p>
   <a href="${article.url}" class="btn">
     Read Article →
   </a>
