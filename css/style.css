@@ -729,3 +729,10 @@ top:90px;
     display:block;
     min-width:max-content;
 }
+.blog-card-image{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:18px;
+}
