@@ -67,7 +67,8 @@ function renderArticles(list) {
   <p>${article.description}</p>
 
   <p class="article-info">
-    <strong>${article.category}</strong> • ${article.readTime}
+    <span class="category-badge">${article.category}</span>
+<span class="article-readtime">${article.readTime}</span>
 </p>
 
 <p class="article-meta-card">
