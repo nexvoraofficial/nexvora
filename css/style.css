@@ -747,3 +747,18 @@ top:90px;
     font-size:.9rem;
     color:var(--muted);
 }
+.category-badge{
+    display:inline-block;
+    padding:6px 12px;
+    background:var(--primary);
+    color:#fff;
+    border-radius:999px;
+    font-size:.85rem;
+    font-weight:600;
+    margin-right:10px;
+}
+
+.article-readtime{
+    color:var(--muted);
+    font-size:.9rem;
+}
