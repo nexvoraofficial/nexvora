@@ -44,7 +44,15 @@ const searchInput = document.getElementById("article-search");
 function renderArticles(list) {
 
   if (!blogPosts) return;
-
+  if (list.length === 0) {
+  blogPosts.innerHTML = `
+    <div class="card" style="text-align:center;">
+      <h3>No articles found</h3>
+      <p>Try searching with a different keyword or category.</p>
+    </div>
+  `;
+  return;
+}
   blogPosts.innerHTML = list.map(article => `
     <div class="card">
 
