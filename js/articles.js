@@ -21,10 +21,10 @@ const articles = [
     title: "How to Build Your First Website",
     category: "Web Design",
     author: "Nexvora Team",
-    date: "July 8, 2026",
-    readTime: "10 min read",
+    date: "July 12, 2026",
+    readTime: "18 min read",
 
-    image: "images/blog/website.png",
+    image: "images/blog/first-website.png",
 
     description:
       "Learn how to plan, design and build your first professional website using HTML, CSS and JavaScript."
@@ -36,10 +36,10 @@ const articles = [
     title: "SEO Checklist for Beginners",
     category: "SEO",
     author: "Nexvora Team",
-    date: "July 8, 2026",
-    readTime: "9 min read",
+    date: "July 13, 2026",
+    readTime: "20 min read",
 
-    image: "images/blog/seo.png",
+    image: "images/blog/seo-checklist.png",
 
     description:
       "Follow this beginner-friendly SEO checklist to improve website visibility, performance and Google rankings."
