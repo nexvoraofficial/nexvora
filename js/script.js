@@ -48,17 +48,23 @@ function renderArticles(list) {
   blogPosts.innerHTML = list.map(article => `
     <div class="card">
 
-      <h3>${article.title}</h3>
+  <img
+    src="${article.image}"
+    alt="${article.title}"
+    loading="lazy"
+    class="blog-card-image">
 
-      <p>${article.description}</p>
+  <h3>${article.title}</h3>
 
-      <p><strong>${article.category}</strong> • ${article.readTime}</p>
+  <p>${article.description}</p>
 
-      <a href="${article.url || `article.html?id=${article.id}`}" class="btn">
-        Read Article →
-      </a>
+  <p><strong>${article.category}</strong> • ${article.readTime}</p>
 
-    </div>
+  <a href="${article.url}" class="btn">
+    Read Article →
+  </a>
+
+</div>
   `).join("");
 
 }
