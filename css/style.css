@@ -736,3 +736,14 @@ top:90px;
     border-radius:12px;
     margin-bottom:18px;
 }
+.article-info{
+    margin-top:12px;
+    font-weight:600;
+    color:var(--primary);
+}
+
+.article-meta-card{
+    margin-top:8px;
+    font-size:.9rem;
+    color:var(--muted);
+}
