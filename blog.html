@@ -125,7 +125,7 @@ Latest Articles
 
 <section class="container">
 
-    <div class="card" style="text-align:center;">
+    <div id="newsletter-card" class="card" style="text-align:center;">
 
         <h2>📩 Subscribe to Nexvora</h2>
 
@@ -190,10 +190,7 @@ if (params.get("subscribed") === "true") {
     message.style.fontWeight = "bold";
     message.style.textAlign = "center";
 
-    const newsletterCard = document.querySelector(
-        "section.container .card"
-    );
-
+    const newsletterCard = document.getElementById("newsletter-card");
     if (newsletterCard) {
         newsletterCard.prepend(message);
     }
