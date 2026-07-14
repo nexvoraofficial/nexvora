@@ -111,6 +111,46 @@ if (blogPosts && typeof articles !== "undefined") {
 
 }
 // ==========================
+// Home Latest Articles
+// ==========================
+
+const homeBlogPosts = document.getElementById("home-blog-posts");
+
+if (homeBlogPosts && typeof articles !== "undefined") {
+
+  const latestArticles = articles.slice(-3).reverse();
+
+  homeBlogPosts.innerHTML = latestArticles.map(article => `
+    <div class="card">
+
+      <img
+        src="${article.image}"
+        alt="${article.title}"
+        loading="lazy"
+        class="blog-card-image">
+
+      <h3>${article.title}</h3>
+
+      <p>${article.description}</p>
+
+      <p class="article-info">
+        <span class="category-badge">${article.category}</span>
+        <span class="article-readtime">${article.readTime}</span>
+      </p>
+
+      <p class="article-meta-card">
+        By ${article.author} • ${article.date}
+      </p>
+
+      <a href="${article.url}" class="btn">
+        Read Article →
+      </a>
+
+    </div>
+  `).join("");
+
+}
+// ==========================
 // Category Filter
 // ==========================
 
