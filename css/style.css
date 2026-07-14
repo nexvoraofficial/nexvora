@@ -796,3 +796,20 @@ top:90px;
     color:var(--muted);
     margin:7px 0;
 }
+/* =========================
+   SERVICE CARDS
+========================= */
+
+.service-card{
+    height:100%;
+}
+
+.service-features{
+    margin-top:18px;
+    padding-left:20px;
+}
+
+.service-features li{
+    color:var(--muted);
+    margin:8px 0;
+}
