@@ -762,3 +762,37 @@ top:90px;
     color:var(--muted);
     font-size:.9rem;
 }
+/* =========================
+   PORTFOLIO CARDS
+========================= */
+
+.portfolio-card{
+    overflow:hidden;
+}
+
+.portfolio-image{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.portfolio-category{
+    color:var(--primary) !important;
+    font-size:.85rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+    margin-bottom:8px;
+}
+
+.portfolio-features{
+    margin:18px 0 5px;
+    padding-left:20px;
+}
+
+.portfolio-features li{
+    color:var(--muted);
+    margin:7px 0;
+}
