@@ -271,7 +271,65 @@ Send Project Request
 </div>
 
 </section>
+<!-- =========================
+     CONTACT INFORMATION
+========================= -->
 
+<section class="container">
+
+<div class="features">
+
+<div class="card">
+
+<h3>📧 Email</h3>
+
+<p>
+mailnexvora@gmail.com
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💬 WhatsApp</h3>
+
+<p>
++94 76 092 0212
+</p>
+
+<a
+href="https://wa.me/94760920212"
+class="btn"
+target="_blank"
+rel="noopener noreferrer">
+Chat Now
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🌍 Service Area</h3>
+
+<p>
+We work remotely with clients worldwide and deliver professional websites for businesses, startups and personal brands.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⏱ Response Time</h3>
+
+<p>
+Most enquiries receive a response within 24 hours.
+</p>
+
+</div>
+
+</div>
+
+</section>
 <section class="container">
 
 <div class="card">
@@ -295,7 +353,34 @@ Send Project Request
 </div>
 
 </footer>
+<script>
+const params = new URLSearchParams(window.location.search);
 
+if (params.get("submitted") === "true") {
+
+    const message = document.createElement("div");
+
+    message.innerHTML =
+    "✅ Thank you! Your project request has been sent successfully. We will contact you within 24 hours.";
+
+    message.style.background = "#d4edda";
+    message.style.color = "#155724";
+    message.style.padding = "18px";
+    message.style.margin = "20px auto";
+    message.style.maxWidth = "900px";
+    message.style.borderRadius = "10px";
+    message.style.fontWeight = "bold";
+    message.style.textAlign = "center";
+
+    const form = document.getElementById("contact-form");
+
+    if(form){
+        form.parentElement.insertBefore(message, form);
+    }
+
+    window.history.replaceState({}, document.title, window.location.pathname);
+}
+</script>
 <script src="js/script.js"></script>
     
 <script>
