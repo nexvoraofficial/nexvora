@@ -904,3 +904,20 @@ label{
     font-weight:600;
     color:var(--text);
 }
+/* =========================
+   HOMEPAGE STATS
+========================= */
+
+.stats-grid{
+    text-align:center;
+}
+
+.stat-card h3{
+    font-size:2rem;
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+.stat-card p{
+    font-weight:600;
+}
