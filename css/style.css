@@ -656,7 +656,7 @@ background:#8a7bff;
 #scroll-top{
 position:fixed;
 right:25px;
-bottom:25px;
+bottom:95px;
 width:48px;
 height:48px;
 border:none;
@@ -885,7 +885,10 @@ top:90px;
     .featured-package:hover{
         transform:none;
     }
-
+     #scroll-top{
+    right:15px;
+    bottom:80px;
+}
 }
 select{
     width:100%;
