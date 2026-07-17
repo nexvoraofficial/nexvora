@@ -54,7 +54,7 @@ const articles = [
   date: "July 17, 2026",
   readTime: "12 min read",
 
-  image: "images/blog/web-design-trends-2026.webp",
+  image: "images/blog/web-design-trends-2026.png",
 
   description:
     "Discover the top web design trends every business should follow in 2026 to improve user experience, SEO, accessibility, website performance and conversions."
