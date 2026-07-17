@@ -284,8 +284,11 @@ if(scrollTopBtn){
 
 window.addEventListener("scroll",()=>{
 
-scrollTopBtn.style.display=
-window.scrollY>400?"block":"none";
+if (window.scrollY > 400) {
+    scrollTopBtn.classList.add("show");
+} else {
+    scrollTopBtn.classList.remove("show");
+}
 
 });
 
