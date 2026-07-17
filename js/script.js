@@ -278,27 +278,36 @@ if (copyArticleLink) {
   });
 
 }
-const scrollTopBtn=document.getElementById("scroll-top");
+/* =========================
+SCROLL TO TOP BUTTON
+========================= */
 
-if(scrollTopBtn){
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTopButton =
+    document.getElementById("scroll-top");
 
-window.addEventListener("scroll",()=>{
+  if (!scrollTopButton) return;
 
-if (window.scrollY > 400) {
-    scrollTopBtn.classList.add("show");
-} else {
-    scrollTopBtn.classList.remove("show");
-}
+  function toggleScrollTopButton() {
+    if (window.scrollY > 300) {
+      scrollTopButton.classList.add("show");
+    } else {
+      scrollTopButton.classList.remove("show");
+    }
+  }
 
+  window.addEventListener(
+    "scroll",
+    toggleScrollTopButton,
+    { passive: true }
+  );
+
+  scrollTopButton.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  toggleScrollTopButton();
 });
-
-scrollTopBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-});
-
-}
