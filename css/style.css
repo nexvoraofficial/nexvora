@@ -411,7 +411,25 @@ textarea{
         right:15px;
         bottom:15px;
     }
+    #scroll-top{
+    right:15px;
+    bottom:80px;
+}
+   #scroll-top:hover{
+    transform:translateY(-3px);
+    background:#5a4be6;
+    transition:.3s;
+}
+   #scroll-top{
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .3s ease, visibility .3s ease, transform .3s ease;
+}
 
+#scroll-top.show{
+    opacity:1;
+    visibility:visible;
+}
 }
 
 
@@ -885,10 +903,6 @@ top:90px;
     .featured-package:hover{
         transform:none;
     }
-     #scroll-top{
-    right:15px;
-    bottom:80px;
-}
 }
 select{
     width:100%;
