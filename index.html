@@ -166,7 +166,7 @@
 
 <section class="container">
 
-    <div class="card">
+    <div id="home-newsletter-card" class="card">
 
         <h2>📩 Stay Updated</h2>
 
@@ -203,19 +203,28 @@ if (params.get("subscribed") === "true") {
 
     const message = document.createElement("div");
 
-    message.innerHTML = "✅ Thank you for subscribing!";
+    message.textContent = "✅ Thank you for subscribing!";
 
     message.style.background = "#d4edda";
     message.style.color = "#155724";
     message.style.padding = "15px";
-    message.style.margin = "20px";
+    message.style.marginBottom = "20px";
     message.style.borderRadius = "10px";
     message.style.fontWeight = "bold";
     message.style.textAlign = "center";
 
-    document.querySelector(".container").prepend(message);
+    const newsletterCard =
+    document.getElementById("home-newsletter-card");
 
-    window.history.replaceState({}, document.title, window.location.pathname);
+    if (newsletterCard) {
+        newsletterCard.prepend(message);
+    }
+
+    window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+    );
 }
 </script>
     <!-- =========================
