@@ -411,25 +411,7 @@ textarea{
         right:15px;
         bottom:15px;
     }
-    #scroll-top{
-    right:15px;
-    bottom:80px;
-}
-   #scroll-top:hover{
-    transform:translateY(-3px);
-    background:#5a4be6;
-    transition:.3s;
-}
-   #scroll-top{
-    opacity:0;
-    visibility:hidden;
-    transition:opacity .3s ease, visibility .3s ease, transform .3s ease;
-}
-
-#scroll-top.show{
-    opacity:1;
-    visibility:visible;
-}
+    
 }
 
 
@@ -992,5 +974,43 @@ SCROLL TO TOP BUTTON
   #scroll-top {
     right: 18px;
     bottom: 80px;
+  }
+}
+/* =========================
+TABLE OF CONTENTS FIX
+========================= */
+
+.table-of-contents {
+  overflow: hidden;
+}
+
+.table-of-contents ol {
+  margin: 0;
+  padding-left: 32px;
+}
+
+.table-of-contents li {
+  padding-left: 6px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.table-of-contents a {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 600px) {
+  .article-page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .table-of-contents ol {
+    padding-left: 28px;
+  }
+
+  .table-of-contents li {
+    padding-left: 4px;
   }
 }
